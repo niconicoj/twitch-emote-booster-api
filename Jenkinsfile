@@ -14,20 +14,17 @@ pipeline {
     }
     stage('deploy'){
       agent {
-        label 'debian-server'
+        node {
+          label 'debian-server'
+          customWorkspace 'twitch-emote-booster/api'
+        }
       }
       when {
         branch 'master'
       }
       steps {
-        sh '''
-          cd twitch-emote-booster/api;
-          git pull;
-        '''
-        sh '''
-          cd twitch-emote-booster/api;
-          npm install;
-        '''
+        sh 'git pull';
+        sh 'npm install';
       }
     }
   }
