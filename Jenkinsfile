@@ -23,7 +23,6 @@ pipeline {
         branch 'master'
       }
       steps {
-        sh 'git pull';
         sh 'npm install';
       }
     }
