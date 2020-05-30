@@ -25,7 +25,8 @@ pipeline {
       steps {
         sh 'npm install';
         withCredentials([file(credentialsId: 'twitch-emote-booster-api-env', variable: 'ENV_FILE')]) {
-           sh '''cp $ENV_FILE .env
+           sh 'cp $ENV_FILE .env';
+        }
       }
     }
   }
