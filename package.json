@@ -1,7 +1,7 @@
 {
-  "name": "stickit",
+  "name": "twitch-emote-booster-api",
   "version": "1.0.0",
-  "description": "API for my Twithc emote booster web app.",
+  "description": "API for my Twitch emote booster web app.",
   "main": "index.js",
   "scripts": {
     "start": "nodemon",
